@@ -1,38 +1,140 @@
-.App {
-  text-align: center;
-}
+page {
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  background: #f2f0ec;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+/* ---- Card aur sidebar ko sath mein rakhne wala row ---- */
+.wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ---- White card jisme quiz hai ---- */
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  width: 480px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ---- Top title ---- */
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* ---- Question wala box ---- */
+.questionBox {
+  border: 1px solid #a3a3f5;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.questionLabel {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* ---- Har option button ---- */
+.optionButton {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.optionButton:hover {
+  border-color: #bbb;
+}
+
+/* ---- Jab option select ho jaye ---- */
+.optionSelected {
+  border: 1px solid #6366f1;
+  background: #eef0ff;
+  color: #4338ca;
+}
+
+/* ---- Prev / Next buttons ka row ---- */
+.navRow {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.navButton {
+  padding: 8px 20px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+
+.navButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ---- Sidebar (right side box) ---- */
+.sidebar {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+.sidebarTitle {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* ---- Number bubbles ka grid (5 per row) ---- */
+.bubbleGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.bubble {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: #e5e5e5;
+  color: #777;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* ---- Jis question ka answer de diya ---- */
+.bubbleAnswered {
+  background: #a5a6f6;
+  color: #fff;
+}
+
+/* ---- Jo question abhi khula hai ---- */
+.bubbleCurrent {
+  background: #f4a3a3;
+  color: #fff;
 }
